@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{789FC56D-E7F9-4859-831C-BE3B561DA7B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Estacionamento</RootNamespace>
+    <AssemblyName>Estacionamento</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexao.cs" />
+    <Compile Include="Controlers\DarkXTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controlers\DarkXTextBox.Designer.cs">
+      <DependentUpon>DarkXTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud.cs" />
+    <Compile Include="Data_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Base.Designer.cs">
+      <DependentUpon>Data_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Definicoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definicoes.Designer.cs">
+      <DependentUpon>Definicoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Func_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Func_Caixa.Designer.cs">
+      <DependentUpon>Form_Func_Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciador.cs" />
+    <Compile Include="GestaoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoClientes.Designer.cs">
+      <DependentUpon>GestaoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoVagas.Designer.cs">
+      <DependentUpon>GestaoVagas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoVeiculos.Designer.cs">
+      <DependentUpon>GestaoVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InserirCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InserirCliente.Designer.cs">
+      <DependentUpon>InserirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InserirVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InserirVeiculo.Designer.cs">
+      <DependentUpon>InserirVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarCliente.Designer.cs">
+      <DependentUpon>ListarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamento.Designer.cs">
+      <DependentUpon>Pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamentos.Designer.cs">
+      <DependentUpon>Pagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controlers\DarkXTextBox.resx">
+      <DependentUpon>DarkXTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Func_Caixa.resx">
+      <DependentUpon>Form_Func_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoClientes.resx">
+      <DependentUpon>GestaoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoVagas.resx">
+      <DependentUpon>GestaoVagas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoVeiculos.resx">
+      <DependentUpon>GestaoVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InserirCliente.resx">
+      <DependentUpon>InserirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InserirVeiculo.resx">
+      <DependentUpon>InserirVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarCliente.resx">
+      <DependentUpon>ListarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Form2.Designer.vb" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
